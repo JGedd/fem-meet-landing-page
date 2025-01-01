@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --green: hsl(192, 37%, 48%);
+  --purple: hsl(268, 34%, 53%);
+  --dark-purple: hsl(240, 21%, 20%);
+  --grayish-purple: hsl(240, 10%, 57%);
+  --turquoise: hsl(192, 90%, 77%);
+  --light-purple: hsl(268, 100%, 86%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px, 10px/16px = 62.5% */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Red Hat Display', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--grayish-purple);
+  line-height: 1.4;
+  min-height: 100vh;
+
+  background-image: url('/assets/desktop/image-hero-left.png'),
+    url(/assets/desktop/image-hero-right.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 10% left -3.5rem, top 10% right -3rem;
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 8rem 0 6rem 0;
+}
+
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  height: 35.8rem;
+  margin-bottom: 20rem;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__heading {
+  font-size: 6.4rem;
+  font-weight: 900;
+  color: var(--dark-purple);
+  margin-bottom: 3.4rem;
+}
+
+.hero__paragraph {
+  font-weight: 500;
+  color: var(--grayish-purple);
+  text-align: center;
+  margin-bottom: 3.4rem;
+}
+
+.hero__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+
+.btn {
+  padding: 1.6rem 2.9rem;
+  border-radius: 2.9rem;
+  border: 0;
+
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.btn--download {
+  background-color: var(--green);
+}
+
+.btn--download span {
+  color: var(--turquoise);
+}
+
+.btn--info {
+  background-color: var(--purple);
+}
+
+.main__content__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section__number {
+  height: 5.6rem;
+  width: 5.6rem;
+  border: solid 1px var(--grayish-purple);
+  border-radius: 100px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--grayish-purple);
+  margin-bottom: 6.4rem;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__number::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 1px;
+  height: 8.4rem;
+  background-color: var(--grayish-purple);
+  transform: translateX(-50%);
+}
+
+.image__gallery {
+  margin-bottom: 8rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.image__gallery--img {
+  width: 25.5rem;
+  height: 24.2rem;
+  border-radius: 8px;
+}
+
+.cta {
+  margin-bottom: 18.4rem;
+}
+
+.cta__sub-heading {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.cta__heading {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--dark-purple);
+
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.cta__paragraph {
+  color: var(--grayish-purple);
+  text-align: center;
+  max-width: 45ch;
+}
+
+.footer {
+  background-image: url(/assets/desktop/image-footer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  color: #fafafa;
+  height: 30.8rem;
+  padding: 11.6rem 16rem 11.4rem 16rem;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(77, 150, 169, 80%);
+  z-index: -1;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 11rem;
+  align-items: center;
+}
+
+.footer__heading {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.btn--footer {
+  padding: 1.6rem 4rem;
+  width: 19.3rem;
+  background-color: var(--purple);
+}
+
+.btn--footer span {
+  color: #d9b8ff;
+}
+
+.section__number--two {
+  position: absolute;
+  left: 50%;
+  top: -8%;
+  background-color: #ffffff;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-image: url('/assets/tablet/image-hero.png');
+    background-repeat: no-repeat;
+    background-position: top 10% left 40%;
+  }
+
+  .container {
+    max-width: 96rem;
+  }
+
+  .hero {
+    height: 31rem;
+    margin: 50rem 0 18rem 0;
+  }
+
+  .hero__heading {
+    font-size: 5.6rem;
+    margin-bottom: 3.3rem;
+  }
+
+  .hero__paragraph {
+    font-size: 1.7rem;
+    margin-bottom: 3.3rem;
+  }
+
+  .cta__paragraph {
+    font-size: 1.7rem;
+    line-height: 1.6;
+  }
+
+  .image__gallery {
+    margin-bottom: 6rem;
+    gap: 2rem;
+  }
+
+  .image__gallery--img {
+    width: 20rem;
+    height: 19rem;
+  }
+
+  .footer {
+    background-image: url(/assets/tablet/image-footer.jpg);
+    height: 36.9rem;
+    padding: 10.4rem 12.9rem 8.7rem 12.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url('/assets/tablet/image-hero.png');
+  }
+
+  .container {
+    max-width: 68.9rem;
+  }
+
+  .hero {
+    height: 26.2rem;
+    margin: 50rem 0 18rem 0;
+  }
+
+  .hero__heading {
+    font-size: 4.8rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .hero__paragraph {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .image__gallery {
+    margin-bottom: 4.8rem;
+    gap: 1.1rem;
+  }
+
+  .image__gallery--img {
+    width: 16.4rem;
+    height: 15.6rem;
+  }
+
+  .cta {
+    margin-bottom: 19.2rem;
+  }
+
+  .cta__paragraph {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .footer {
+    background-image: url(/assets/tablet/image-footer.jpg);
+    height: 42.8rem;
+    padding: 9.2rem 9.8rem 6rem 9.8rem;
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    justify-items: center;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+  body {
+    background-image: url('/assets/tablet/image-hero.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top 6% left 40%;
+  }
+
+  .container {
+    max-width: 38rem;
+  }
+
+  .header {
+    margin: 5.2rem 0 5.8rem 0;
+  }
+
+  .hero {
+    height: 36.7rem;
+    margin: 16em 0 12rem 0;
+  }
+
+  .hero__heading {
+    font-size: 4.4rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .hero__paragraph {
+    font-size: 1.7rem;
+    margin-bottom: 3.4rem;
+  }
+
+  .image__gallery {
+    margin-bottom: 7rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.8rem;
+  }
+
+  .image__gallery--img {
+    width: 17.5rem;
+    height: 16.6rem;
+  }
+
+  .cta {
+    margin-bottom: 18.8rem;
+  }
+
+  .cta__heading {
+    font-size: 3.6rem;
+  }
+
+  .cta__paragraph {
+    font-size: 1.7rem;
+    line-height: 1.6;
+  }
+
+  .footer {
+    background-image: url(/assets/mobile/image-footer.jpg);
+    height: 45rem;
+    padding: 10rem 3.2rem 8rem 3.2rem;
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url('/assets/tablet/image-hero.png');
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: top 6% left -1.7rem;
+  }
+  .container {
+    max-width: 32.7rem;
+  }
+
+  .header {
+    margin: 4.8rem 0 5.4rem 0;
+  }
+
+  .hero {
+    height: 34.7rem;
+    margin: 15em 0 11rem 0;
+  }
+
+  .hero__heading {
+    font-size: 4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .hero__paragraph {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .image__gallery {
+    margin-bottom: 6.4rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+  }
+
+  .image__gallery--img {
+    width: 15.1rem;
+    height: 14.3rem;
+  }
+
+  .cta {
+    margin-bottom: 17.6rem;
+  }
+
+  .cta__heading {
+    font-size: 3.2rem;
+  }
+
+  .cta__paragraph {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .footer {
+    background-image: url(/assets/mobile/image-footer.jpg);
+    height: 42.8rem;
+    padding: 9.2rem 2.4rem 7.2rem 2.4rem;
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    text-align: center;
+  }
+}
