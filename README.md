@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/meet-landing-page-dfA7RRCIw_)
+- Live Site URL: [Live site at Netlify](https://funny-rolypoly-d492bb.netlify.app/)
 
 ## My process
 
